@@ -1,0 +1,14 @@
+---
+title: "R Notebook"
+output: github_document
+---
+
+```{r}
+# Forward and reverse fastq filenames have format: SAMPLENAME_R1_001.fastq and SAMPLENAME_R2_001.fastq
+fnFs <- sort(list.files(path, pattern="1.fastq", full.names = TRUE))
+fnRs <- sort(list.files(path, pattern="2.fastq", full.names = TRUE))
+# Extract sample names, assuming filenames have format: SAMPLENAME_XXX.fastq
+sample.names <- sapply(strsplit(basename(fnFs), "_"), `[`, 1)
+```
+
+/home/rstudio/DADA2-16-09/lézar
