@@ -24,14 +24,9 @@ install.packages("igraph", type = "source")
 ```
 
 ```{r}
-if (!requireNamespace("BiocManager", quietly = TRUE)) {
-  install.packages("BiocManager")
-}
-
-BiocManager::install(
-  "phyloseq",
-  ask = FALSE,
-  update = FALSE
-)
+ install.packages("igraph", type = "source")
+```
+```{r}
+BiocManager::install("phyloseq", update = FALSE)
 ```
 
