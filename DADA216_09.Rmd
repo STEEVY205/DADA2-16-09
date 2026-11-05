@@ -304,8 +304,7 @@ top20 <- names(sort(taxa_sums(ps), decreasing=TRUE))[1:20]
 ps.top20 <- transform_sample_counts(ps, function(OTU) OTU/sum(OTU))
 
 # Conservation des 20 ASV les plus abondants
-ps.top20 <- prune_taxa(top20, ps.top20)
-
+ps.top20 <- prune_taxa(top20, ps.top20) 
 # Représentation graphique de leur distribution
 plot_bar(ps.top20, x="Day", fill="Family") + facet_wrap(~When, scales="free_x")
 ```
